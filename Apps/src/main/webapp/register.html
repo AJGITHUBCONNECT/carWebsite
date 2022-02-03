@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration</title>
+<style type="text/css">
+* {
+	box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+	padding: 16px;
+	background-color: #FFFFFF;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+.registerbtn {
+	background-color: blue;
+	color: #FFFFFF;
+	padding: 16px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.5;
+}
+
+.registerbtn:hover {
+	background-color: #00008B;
+	color: aliceblue;
+	opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+	<div class="container">
+
+
+		<form action="registerservlet" method="post">
+
+			<h1>Register</h1>
+			<p>Please fill this form to create an account.</p>
+			<hr>
+
+			Username:<input type="text" name="userName" /><br /> <br />
+			Password:<input type="password" name="userPass" /><br /> <br />
+			Email Id:<input type="text" name="userEmail" /><br /> <br />
+			Country: <select name="userCountry">
+				<option>India</option>
+				<option>USA</option>
+				<option>other</option>
+			</select> <br /> <br /> 
+			<input type="submit" value="Register" class="registerbtn" />
+		</form>
+
+		<p>
+			Already have account? <a href="/Apps/login.html">Login here</a> here
+		</p>
+	</div>
+</body>
+</html>
